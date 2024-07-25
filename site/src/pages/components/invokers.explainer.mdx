@@ -26,7 +26,7 @@ Adding `commandfor` and `command` attributes to `<button>` and elements would
 allow authors to assign behaviour to buttons in a more accessible and
 declarative way, while reducing bugs and simplifying the amount of JavaScript
 pages are required to ship for interactivity. Buttons with `command` will -
-when clicked, touched, or enacted via keypress - dispatch a `CommandEvent`
+when clicked, touched, or activated via keypress - dispatch a `CommandEvent`
 on the element referenced by `commandfor`, with some default behaviours.
 
 ## Background
@@ -129,7 +129,7 @@ example calling `.preventDefault()` or executing custom side-effects).
 Invokers will dispatch an `CommandEvent` on the _Invokee_ (the element referenced
 by `commandfor`) when the element is _Invoked_. The `CommandEvent`'s `type` is
 always `command`. The event also contains an `source` property that will reference
-button that was enacted causing the `CommandEvent` to fire. The dispatched
+button that was activated causing the `CommandEvent` to fire. The dispatched
 `CommandEvents` are always non-bubbling, composed, trusted, cancellable events.
 
 ```webidl
